@@ -14,7 +14,7 @@
 
 <div id="menu">
   <h1>Select a Song</h1>
-  <button onclick="startSong('song1')">Sex</button>
+  <button onclick="startSong('song1')">Play</button>
 </div>
 
 <canvas id="gameCanvas" width="400" height="600" style="display:none"></canvas>
@@ -28,7 +28,7 @@ const laneWidth = canvas.width / lanes;
 let notes = [];
 let score = 0;
 let pressed = [false,false,false,false];
-const keys = ["d","f","j","k"];
+const keys = ["z","x",",","."];
 const laneColors = ["purple", "cyan", "#00ff00", "red"];
 let audio, currentSong, startTime;
 
@@ -49,7 +49,7 @@ const songs = {
     id:'song1',
     title:'balls',
     audioSrc:'dontplay.mp3',
-    NOTESPEED: 7,
+    NOTESPEED: 12,
     notesData:[
       { type:'tap', time:1000, lane:0 },
       { type:'tap', time:1500, lane:1 },
@@ -80,7 +80,7 @@ function draw() {
 
   for (let i=0;i<lanes;i++) {
     const color = pressed[i] ? "white" : "gray";
-    drawArrow(i*laneWidth+10, canvas.height-50, laneWidth-20, 40, color);
+    drawArrow(i*laneWidth+10, canvas.height-50, laneWidth-20, 80, color);
   }
 
   const hitY = canvas.height - 50;
