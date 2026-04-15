@@ -205,7 +205,7 @@ function draw() {
   }
 
   const hitY = canvas.height - 50;
-  const travelTime = 10000 / currentSong.NOTESPEED;
+  const travelTime = 10000 / (currentSong ? currentSong.NOTESPEED : 20);
   const pixelsPerMs = hitY / travelTime;
   const elapsed = performance.now() - startTime;
 
