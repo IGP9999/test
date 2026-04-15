@@ -201,7 +201,7 @@ function draw() {
 
   for (let i=0;i<lanes;i++) {
     const color = pressed[i] ? "white" : "gray";
-    drawArrow(i*laneWidth+10, canvas.height-20, laneWidth-20, 40, color);
+    drawArrow(i*laneWidth+10, canvas.height-20, laneWidth-20, 80, color);
   }
 
   const hitY = canvas.height - 50;
@@ -212,7 +212,7 @@ function draw() {
   notes.forEach(note => {
     const color = laneColors[note.lane];
     if (note.type === "tap") {
-      drawArrow(note.lane * laneWidth + 10, note.y, laneWidth-20, 40, color);
+      drawArrow(note.lane * laneWidth + 10, note.y, laneWidth-20, 80, color);
     } else if (note.type === "hold") {
       const startY = hitY - (note.startTime - elapsed) * pixelsPerMs;
       const endY   = hitY - (note.endTime   - elapsed) * pixelsPerMs;
