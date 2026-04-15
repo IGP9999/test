@@ -261,7 +261,7 @@ function update() {
       notes.splice(i, 1);
     }
     if (note.type === "hold" && elapsed > note.endTime + 200) {
- 
+
       if (!note.completed) {
         score -= 5;
       }
@@ -285,14 +285,17 @@ document.addEventListener("keydown", e => {
           if (diff < 50) {    
             score += 50;
             notes.splice(i, 1);
+            pressed[lane] = false;
             break;
           } else if (diff < 100) {  
             score += 30;
             notes.splice(i, 1);
+            pressed[lane] = false;
             break;
           } else if (diff < 150) {  
             score += 10;
             notes.splice(i, 1);
+            pressed[lane] = false;
             break;
           }
         } else if (note.type === "hold") {
