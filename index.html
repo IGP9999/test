@@ -283,16 +283,22 @@ document.addEventListener("keypressed", e => {
         if (note.type === "tap") {
           const diff = Math.abs(now - note.targetTime); 
           if (diff < 50) {    
+            pressed[lane] = true
             score += 50;
             notes.splice(i, 1);
+            pressed[lane] = false
             break;
           } else if (diff < 100) {  
+            pressed[lane] = true
             score += 30;
             notes.splice(i, 1);
+            pressed[lane] = false
             break;
           } else if (diff < 150) {  
+            pressed[lane] = true
             score += 10;
             notes.splice(i, 1);
+            pressed[lane] = false
             break;
           }
         } else if (note.type === "hold") {
