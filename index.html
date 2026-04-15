@@ -271,7 +271,7 @@ function update() {
 }
 
 // --- Input ---
-document.addEventListener("keypressed", e => {
+document.addEventListener("keydown", e => {
   const lane = keys.indexOf(e.key);
   if (lane !== -1) {
     pressed[lane] = true;
@@ -290,10 +290,6 @@ document.addEventListener("keypressed", e => {
             score += 30;
             notes.splice(i, 1);
             break;
-          } else if (diff < 150) {  
-            score += 10;
-            notes.splice(i, 1);
-            break;
           }
         } else if (note.type === "hold") {
           const diff = Math.abs(now - note.startTime);
@@ -301,7 +297,6 @@ document.addEventListener("keypressed", e => {
             note.active = true; 
           }
         }
-      press[lane]=false;
       }
     }
   }
