@@ -36,9 +36,9 @@ let audio, currentSong, startTime;
 function drawArrow(x, y, width, height, color) {
   ctx.fillStyle = color;
   ctx.beginPath();
-  ctx.moveTo(x + width/2, y);           // tip
-  ctx.lineTo(x + width, y + height);    // right bottom
-  ctx.lineTo(x, y + height);            // left bottom
+  ctx.moveTo(x + width/2, y+height);           // tip
+  ctx.lineTo(x + width, y);    // right bottom
+  ctx.lineTo(x, y);            // left bottom
   ctx.closePath();
   ctx.fill();
 }
