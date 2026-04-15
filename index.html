@@ -235,7 +235,7 @@ function update() {
 
   currentSong.notesData.forEach(nd => {
     if (nd.spawned === undefined) {
-      if (nd.type === "tap" && elapsed >= nd.time - travelTime) {
+      if (nd.type === "tap" && elapsed >= 1.25*nd.time - travelTime) {
         notes.push({ type:"tap", lane: nd.lane, targetTime: nd.time });
         nd.spawned = true;
       }
