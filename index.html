@@ -201,7 +201,7 @@ function draw() {
 
   for (let i=0;i<lanes;i++) {
     const color = pressed[i] ? "white" : "gray";
-    drawArrow(i*laneWidth+10, canvas.height-50, laneWidth-20, 80, color);
+    drawArrow(i*laneWidth+10, canvas.height-20, laneWidth-20, 80, color);
   }
 
   const hitY = canvas.height - 50;
@@ -229,7 +229,7 @@ function draw() {
 function update() {
   const now = performance.now();
   const elapsed = now - startTime;
-  const hitY = canvas.height - 50; 
+  const hitY = canvas.height-20; 
   const travelTime = 10000 / currentSong.NOTESPEED;      
   const pixelsPerMs = hitY / travelTime;
 
