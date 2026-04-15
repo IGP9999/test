@@ -49,7 +49,7 @@ const songs = {
     id:'song1',
     title:'balls',
     audioSrc:'dontplay.mp3',
-    NOTESPEED: 20,
+    NOTESPEED:20,
     notesData:[
       { type:'tap', time:1000, lane:0 },
       { type:'tap', time:1500, lane:1 },
@@ -84,7 +84,7 @@ function draw() {
   }
 
   const hitY = canvas.height - 50;
-  const travelTime = 10000/NOTESPEED;
+  const travelTime = 500;
   const pixelsPerMs = hitY / travelTime;
   const elapsed = performance.now() - startTime;
 
@@ -109,7 +109,7 @@ function update() {
   const now = performance.now();
   const elapsed = now - startTime;
   const hitY = canvas.height - 50; 
-  const travelTime = 2000;      
+  const travelTime = 500;      
   const pixelsPerMs = hitY / travelTime;
 
   currentSong.notesData.forEach(nd => {
