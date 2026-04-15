@@ -53,9 +53,7 @@ const songs = {
     notesData:[
       { type:'tap', time:1000, lane:0 },
       { type:'tap', time:1500, lane:1 },
-      { type:'hold', startTime:2000, endTime:4000, lane:2 },
       { type:'tap', time:4500, lane:3 },
-      { type:'hold', startTime:5000, endTime:7000, lane:0 },
       { type:'tap', time:8000, lane:1 }
     ]
   }
@@ -84,7 +82,7 @@ function draw() {
   }
 
   const hitY = canvas.height - 50;
-  const travelTime = 500;
+  const travelTime = 10000/NOTESPEED;
   const pixelsPerMs = hitY / travelTime;
   const elapsed = performance.now() - startTime;
 
@@ -109,7 +107,7 @@ function update() {
   const now = performance.now();
   const elapsed = now - startTime;
   const hitY = canvas.height - 50; 
-  const travelTime = 500;      
+  const travelTime = 10000/NOTESPEED;      
   const pixelsPerMs = hitY / travelTime;
 
   currentSong.notesData.forEach(nd => {
