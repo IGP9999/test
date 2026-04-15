@@ -285,17 +285,14 @@ document.addEventListener("keypressed", e => {
           if (diff < 50) {    
             score += 50;
             notes.splice(i, 1);
-            pressed[lane] = true;
             break;
           } else if (diff < 100) {  
             score += 30;
             notes.splice(i, 1);
-            pressed[lane] = true;
             break;
           } else if (diff < 150) {  
             score += 10;
             notes.splice(i, 1);
-            pressed[lane] = true;
             break;
           }
         } else if (note.type === "hold") {
