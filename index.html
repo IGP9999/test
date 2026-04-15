@@ -271,7 +271,7 @@ function update() {
 }
 
 // --- Input ---
-document.addEventListener("keydown", e => {
+document.addEventListener("keypressed", e => {
   const lane = keys.indexOf(e.key);
   if (lane !== -1) {
     pressed[lane] = true;
