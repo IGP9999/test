@@ -230,7 +230,7 @@ function update() {
   const now = performance.now();
   const elapsed = now - startTime;
   const hitY = canvas.height - 50; 
-  const travelTime = 10000/NOTESPEED;      
+  const travelTime = 10000 / currentSong.NOTESPEED;      
   const pixelsPerMs = hitY / travelTime;
 
   currentSong.notesData.forEach(nd => {
