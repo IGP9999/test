@@ -84,7 +84,7 @@ function draw() {
   }
 
   const hitY = canvas.height - 50;
-  const travelTime = 2000;
+  const travelTime = 10000/NOTESPEED;
   const pixelsPerMs = hitY / travelTime;
   const elapsed = performance.now() - startTime;
 
